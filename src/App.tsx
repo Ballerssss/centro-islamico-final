@@ -376,10 +376,10 @@ export default function App() {
             {[
               { 
                 title: t.gallery.categories.addiction, 
-                img: "/b9a793e6-eb50-49ea-a01d-9315e4572e7e.jpg", 
+                img: "b9a793e6-eb50-49ea-a01d-9315e4572e7e.jpg", 
                 imgs: [
-                  "/vids/video-adiction.mp4",
-                  "/b9a793e6-eb50-49ea-a01d-9315e4572e7e.jpg"
+                  "vids/video-adiction.mp4",
+                  "b9a793e6-eb50-49ea-a01d-9315e4572e7e.jpg"
                 ] 
               },
               { 
