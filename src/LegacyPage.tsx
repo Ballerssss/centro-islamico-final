@@ -3,6 +3,11 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const GOFUNDME_LINK = "https://gofund.me/ad3ddda37";
 
+const getAsset = (path: string) => {
+  const base = import.meta.env.BASE_URL || '/';
+  return `${base}${path.replace(/^\.\//, '').replace(/^\//, '')}`;
+};
+
 export default function LegacyPage({ navigateTo, t, lang }: { navigateTo: (path: string) => void, t: any, lang: string }) {
   return (
     <div className="min-h-screen bg-[var(--color-islamic-deep)] text-white font-sans selection:bg-[var(--color-islamic-emerald)] selection:text-white">
@@ -54,7 +59,7 @@ export default function LegacyPage({ navigateTo, t, lang }: { navigateTo: (path:
               <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-white/5 border border-white/10 relative group">
                 {/* Puedes cambiar esta imagen manualmente editando el atributo 'src' */}
                 <img 
-                  src="./f474c36c-78af-4e3b-a392-dadc2174e0a1.jpg" 
+                  src={getAsset("./f474c36c-78af-4e3b-a392-dadc2174e0a1.jpg")}
                   alt={t.legacy.imgAlt1}
                   className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
                   referrerPolicy="no-referrer"
@@ -63,7 +68,7 @@ export default function LegacyPage({ navigateTo, t, lang }: { navigateTo: (path:
               <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-white/5 border border-white/10 relative group">
                 {/* Puedes cambiar esta imagen manualmente editando el atributo 'src' */}
                 <img 
-                  src="./1d2c0bde-c4f8-4a24-8f89-d11f367b4f2b.jpg" 
+                  src={getAsset("./1d2c0bde-c4f8-4a24-8f89-d11f367b4f2b.jpg")}
                   alt={t.legacy.imgAlt2}
                   className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
                   referrerPolicy="no-referrer"
@@ -72,7 +77,7 @@ export default function LegacyPage({ navigateTo, t, lang }: { navigateTo: (path:
               <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-white/5 border border-white/10 relative group">
                 {/* Puedes cambiar esta imagen manualmente editando el atributo 'src' */}
                 <img 
-                  src="./9f41dd16-bbc4-441c-a7e0-3e7bfbe8c26e.jpg" 
+                  src={getAsset("./9f41dd16-bbc4-441c-a7e0-3e7bfbe8c26e.jpg")}
                   alt={t.legacy.imgAlt3}
                   className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
                   referrerPolicy="no-referrer"
