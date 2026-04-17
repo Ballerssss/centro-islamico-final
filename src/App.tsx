@@ -114,7 +114,7 @@ export default function App() {
         <div className="absolute inset-0 z-0">
           {/* Puedes cambiar esta imagen manualmente editando el atributo 'src' */}
           <img 
-            src="/0c75c09b-b35e-4348-b3d8-4368dfcdc5ef.jpg" 
+            src="./0c75c09b-b35e-4348-b3d8-4368dfcdc5ef.jpg" 
             alt="Islamic Architecture" 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
@@ -202,7 +202,7 @@ export default function App() {
               <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
                 {/* Puedes cambiar esta imagen manualmente editando el atributo 'src' */}
                 <img 
-                  src="/41fd66da-0d56-4fab-9a2b-d9f9739a4024.jpg" 
+                  src="./41fd66da-0d56-4fab-9a2b-d9f9739a4024.jpg" 
                   alt="Mosque architecture" 
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
@@ -376,44 +376,44 @@ export default function App() {
             {[
               { 
                 title: t.gallery.categories.addiction, 
-                img: "b9a793e6-eb50-49ea-a01d-9315e4572e7e.jpg", 
+                img: "./b9a793e6-eb50-49ea-a01d-9315e4572e7e.jpg", 
                 imgs: [
-                  "vids/video-adiction.mp4",
-                  "b9a793e6-eb50-49ea-a01d-9315e4572e7e.jpg"
+                  "./vids/video-adiction.mp4",
+                  "./b9a793e6-eb50-49ea-a01d-9315e4572e7e.jpg"
                 ] 
               },
               { 
                 title: t.gallery.categories.food, 
-                img: "/05302639-4a45-4a16-8b0f-d7e5fbd8c6b7.jpg", 
+                img: "./05302639-4a45-4a16-8b0f-d7e5fbd8c6b7.jpg", 
                 imgs: [
-                  "/vids/video-food.mp4",
-                  "/05302639-4a45-4a16-8b0f-d7e5fbd8c6b7.jpg",
-                  "/54ca4e00-97f6-4bdd-99a5-8d0c9019b211.jpg",
-                  "/341f5005-acbb-48a1-aa7b-9ee5de3d52ad.jpg"
+                  "./vids/video-food.mp4",
+                  "./05302639-4a45-4a16-8b0f-d7e5fbd8c6b7.jpg",
+                  "./54ca4e00-97f6-4bdd-99a5-8d0c9019b211.jpg",
+                  "./341f5005-acbb-48a1-aa7b-9ee5de3d52ad.jpg"
                 ] 
               },
               { 
                 title: t.gallery.categories.quran, 
-                img: "/ef686a8a-6a1f-473c-9f01-909da4073e06.jpg", 
+                img: "./ef686a8a-6a1f-473c-9f01-909da4073e06.jpg", 
                 imgs: [
-                  "/vids/video-quran.mp4",
-                  "/vids/video-quran2.mp4",
-                  "/ef686a8a-6a1f-473c-9f01-909da4073e06.jpg",
-                  "/d69f4c88-bb42-4a70-b438-6ec011dc6bee.jpg",
-                  "/59545d3f-3e5e-4c59-89b4-0d7171061a5d.jpg"
+                  "./vids/video-quran.mp4",
+                  "./vids/video-quran2.mp4",
+                  "./ef686a8a-6a1f-473c-9f01-909da4073e06.jpg",
+                  "./d69f4c88-bb42-4a70-b438-6ec011dc6bee.jpg",
+                  "./59545d3f-3e5e-4c59-89b4-0d7171061a5d.jpg"
                 ] 
               },
               { 
                 title: t.gallery.categories.construction, 
-                img: "/b29a8349-6b5d-4edb-b313-0acf7e5c6ee8.jpg", 
+                img: "./b29a8349-6b5d-4edb-b313-0acf7e5c6ee8.jpg", 
                 imgs: [
-                  "/vids/video-construction.mp4",
-                  "/b29a8349-6b5d-4edb-b313-0acf7e5c6ee8.jpg",
-                  "/9aa209c1-42f3-48d6-a819-ae6cbde5fb15.jpg",
-                  "/bea0d982-5bb1-4561-95ed-afdb4f96899b.jpg",
-                  "/099933e0-ad9d-4abf-82c3-75b060c9f6ee.jpg",
-                  "/a4793aca-2c61-4e6a-b8b5-ffffef3ec05e.jpg",
-                  "/4d1fc065-c6a0-45ed-92b7-aca166862ccf.jpg"
+                  "./vids/video-construction.mp4",
+                  "./b29a8349-6b5d-4edb-b313-0acf7e5c6ee8.jpg",
+                  "./9aa209c1-42f3-48d6-a819-ae6cbde5fb15.jpg",
+                  "./bea0d982-5bb1-4561-95ed-afdb4f96899b.jpg",
+                  "./099933e0-ad9d-4abf-82c3-75b060c9f6ee.jpg",
+                  "./a4793aca-2c61-4e6a-b8b5-ffffef3ec05e.jpg",
+                  "./4d1fc065-c6a0-45ed-92b7-aca166862ccf.jpg"
                 ] 
               }
             ].map((item, index) => (
@@ -730,9 +730,9 @@ export default function App() {
                       className="w-full h-full" 
                       controls 
                       preload="metadata"
-                      poster="/ef686a8a-6a1f-473c-9f01-909da4073e06.jpg"
+                      poster="./ef686a8a-6a1f-473c-9f01-909da4073e06.jpg"
                     >
-                      <source src="/vids/video-ajusco-principal.mp4" type="video/mp4" />
+                      <source src="./vids/video-ajusco-principal.mp4" type="video/mp4" />
                       Tu navegador no soporta el elemento de video.
                     </video>
                   </div>
