@@ -114,12 +114,12 @@ export default function App() {
         <div className="absolute inset-0 z-0">
           {/* Puedes cambiar esta imagen manualmente editando el atributo 'src' */}
           <img 
-            src="https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?q=80&w=2070&auto=format&fit=crop" 
+            src="/0c75c09b-b35e-4348-b3d8-4368dfcdc5ef.jpg" 
             alt="Islamic Architecture" 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-islamic-deep)]/80 via-[var(--color-islamic-deep)]/60 to-[var(--color-islamic-white)]"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-[var(--color-islamic-white)]"></div>
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -137,9 +137,15 @@ export default function App() {
             </motion.h1>
             <motion.p 
               variants={fadeUp}
-              className="text-xl sm:text-2xl text-[var(--color-islamic-white)]/90 font-light mb-10 max-w-2xl leading-relaxed"
+              className="text-xl sm:text-2xl text-[var(--color-islamic-white)]/90 font-light mb-6 max-w-2xl leading-relaxed"
             >
               {t.hero.subtitle}
+            </motion.p>
+            <motion.p 
+              variants={fadeUp}
+              className={`text-lg sm:text-xl text-[var(--color-islamic-gold-light)] font-serif mb-10 max-w-2xl ${lang === 'ar' ? 'font-arabic text-2xl' : 'italic'}`}
+            >
+              {t.hero.bismillah}
             </motion.p>
             <motion.div variants={fadeUp} className="flex flex-wrap gap-4">
               <a 
@@ -196,7 +202,7 @@ export default function App() {
               <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
                 {/* Puedes cambiar esta imagen manualmente editando el atributo 'src' */}
                 <img 
-                  src="https://i.imgur.com/NrPe5Tf.jpeg" 
+                  src="/41fd66da-0d56-4fab-9a2b-d9f9739a4024.jpg" 
                   alt="Mosque architecture" 
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
@@ -206,49 +212,6 @@ export default function App() {
               <div className="absolute -top-8 -right-8 w-48 h-48 bg-[var(--color-islamic-gold)]/20 rounded-full blur-3xl -z-10"></div>
             </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* Legacy Section */}
-      <section className="py-24 bg-[var(--color-islamic-deep)] text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern id="islamic-pattern" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
-                <path d="M30 0L60 30L30 60L0 30Z" fill="none" stroke="currentColor" strokeWidth="1"/>
-                <path d="M15 15L45 45M15 45L45 15" stroke="currentColor" strokeWidth="1"/>
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#islamic-pattern)" />
-          </svg>
-        </div>
-        
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-          >
-            <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl font-serif font-bold mb-8 text-[var(--color-islamic-gold-light)]">
-              {t.legacy.title}
-            </motion.h2>
-            <motion.p variants={fadeUp} className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed font-light">
-              {t.legacy.content1}
-            </motion.p>
-            <motion.p variants={fadeUp} className="text-lg md:text-xl text-white/90 mb-12 leading-relaxed font-light">
-              {t.legacy.content2}
-            </motion.p>
-            <motion.div variants={fadeUp}>
-              <button 
-                onClick={() => navigateTo('/legado-said-louahabi')}
-                className="inline-flex items-center gap-2 text-[var(--color-islamic-deep)] bg-[var(--color-islamic-gold)] hover:bg-[var(--color-islamic-gold-light)] px-8 py-4 rounded-full font-medium text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
-              >
-                {t.legacy.readMoreCta}
-                <ChevronRight className={`w-5 h-5 ${lang === 'ar' ? 'rotate-180' : ''}`} />
-              </button>
-            </motion.div>
-          </motion.div>
         </div>
       </section>
 
@@ -413,41 +376,44 @@ export default function App() {
             {[
               { 
                 title: t.gallery.categories.addiction, 
-                img: "https://i.imgur.com/FAStU9g.jpeg", 
+                img: "/b9a793e6-eb50-49ea-a01d-9315e4572e7e.jpg", 
                 imgs: [
-                  "https://i.imgur.com/FAStU9g.jpeg",
-                  "https://i.imgur.com/d51vURs.jpeg",
-                  "https://i.imgur.com/8wgJA0i.jpeg"
+                  "/vids/video-adiction.mp4",
+                  "/b9a793e6-eb50-49ea-a01d-9315e4572e7e.jpg"
                 ] 
               },
               { 
                 title: t.gallery.categories.food, 
-                img: "https://i.imgur.com/gQAwsOP.jpeg", 
+                img: "/05302639-4a45-4a16-8b0f-d7e5fbd8c6b7.jpg", 
                 imgs: [
-                  "https://i.imgur.com/gQAwsOP.jpeg",
-                  "https://i.imgur.com/Aa8NS3A.jpeg",
-                  "https://i.imgur.com/MRePNYa.jpeg"
+                  "/vids/video-food.mp4",
+                  "/05302639-4a45-4a16-8b0f-d7e5fbd8c6b7.jpg",
+                  "/54ca4e00-97f6-4bdd-99a5-8d0c9019b211.jpg",
+                  "/341f5005-acbb-48a1-aa7b-9ee5de3d52ad.jpg"
                 ] 
               },
               { 
                 title: t.gallery.categories.quran, 
-                img: "https://i.imgur.com/HcaURVG.jpeg", 
+                img: "/ef686a8a-6a1f-473c-9f01-909da4073e06.jpg", 
                 imgs: [
-                  "https://i.imgur.com/HcaURVG.jpeg",
-                  "https://i.imgur.com/0HLNCC4.jpeg",
-                  "https://i.imgur.com/oTyHSih.jpeg"
+                  "/vids/video-quran.mp4",
+                  "/vids/video-quran2.mp4",
+                  "/ef686a8a-6a1f-473c-9f01-909da4073e06.jpg",
+                  "/d69f4c88-bb42-4a70-b438-6ec011dc6bee.jpg",
+                  "/59545d3f-3e5e-4c59-89b4-0d7171061a5d.jpg"
                 ] 
               },
               { 
                 title: t.gallery.categories.construction, 
-                img: "https://i.imgur.com/sQxpKNE.jpeg", 
+                img: "/b29a8349-6b5d-4edb-b313-0acf7e5c6ee8.jpg", 
                 imgs: [
-                  "https://i.imgur.com/sQxpKNE.jpeg",
-                  "https://i.imgur.com/F3ywM4M.jpeg",
-                  "https://i.imgur.com/LMWPWH7.jpeg",
-                  "https://i.imgur.com/KRYsdXA.jpeg",
-                  "https://i.imgur.com/0LLTco2.jpeg",
-                  "https://i.imgur.com/80S8LeF.jpeg"
+                  "/vids/video-construction.mp4",
+                  "/b29a8349-6b5d-4edb-b313-0acf7e5c6ee8.jpg",
+                  "/9aa209c1-42f3-48d6-a819-ae6cbde5fb15.jpg",
+                  "/bea0d982-5bb1-4561-95ed-afdb4f96899b.jpg",
+                  "/099933e0-ad9d-4abf-82c3-75b060c9f6ee.jpg",
+                  "/a4793aca-2c61-4e6a-b8b5-ffffef3ec05e.jpg",
+                  "/4d1fc065-c6a0-45ed-92b7-aca166862ccf.jpg"
                 ] 
               }
             ].map((item, index) => (
@@ -477,6 +443,49 @@ export default function App() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Legacy Section */}
+      <section className="py-24 bg-[var(--color-islamic-deep)] text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="islamic-pattern" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+                <path d="M30 0L60 30L30 60L0 30Z" fill="none" stroke="currentColor" strokeWidth="1"/>
+                <path d="M15 15L45 45M15 45L45 15" stroke="currentColor" strokeWidth="1"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#islamic-pattern)" />
+          </svg>
+        </div>
+        
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+          >
+            <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl font-serif font-bold mb-8 text-[var(--color-islamic-gold-light)]">
+              {t.legacy.title}
+            </motion.h2>
+            <motion.p variants={fadeUp} className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed font-light">
+              {t.legacy.content1}
+            </motion.p>
+            <motion.p variants={fadeUp} className="text-lg md:text-xl text-white/90 mb-12 leading-relaxed font-light">
+              {t.legacy.content2}
+            </motion.p>
+            <motion.div variants={fadeUp}>
+              <button 
+                onClick={() => navigateTo('/legado-said-louahabi')}
+                className="inline-flex items-center gap-2 text-[var(--color-islamic-deep)] bg-[var(--color-islamic-gold)] hover:bg-[var(--color-islamic-gold-light)] px-8 py-4 rounded-full font-medium text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
+              >
+                {t.legacy.readMoreCta}
+                <ChevronRight className={`w-5 h-5 ${lang === 'ar' ? 'rotate-180' : ''}`} />
+              </button>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
@@ -589,16 +598,29 @@ export default function App() {
               className="relative max-w-5xl w-full max-h-[80vh] flex flex-col items-center"
               onClick={(e) => e.stopPropagation()}
             >
-              <motion.img 
-                key={currentImageIndex}
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.2 }}
-                src={selectedGallery.imgs[currentImageIndex]} 
-                alt={selectedGallery.title}
-                className="max-w-full max-h-[75vh] object-contain rounded-lg shadow-2xl"
-              />
+              {selectedGallery.imgs[currentImageIndex].endsWith('.mp4') ? (
+                <motion.video 
+                  key={currentImageIndex}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.2 }}
+                  src={selectedGallery.imgs[currentImageIndex]} 
+                  controls
+                  className="max-w-full max-h-[75vh] object-contain rounded-lg shadow-2xl"
+                />
+              ) : (
+                <motion.img 
+                  key={currentImageIndex}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.2 }}
+                  src={selectedGallery.imgs[currentImageIndex]} 
+                  alt={selectedGallery.title}
+                  className="max-w-full max-h-[75vh] object-contain rounded-lg shadow-2xl"
+                />
+              )}
               <div className="mt-4 text-center">
                 <h3 className="text-2xl font-serif text-white">{selectedGallery.title}</h3>
                 {selectedGallery.imgs.length > 1 && (
@@ -703,9 +725,16 @@ export default function App() {
 
                   <p>{t.aboutModal.p2}</p>
 
-                  <div className="grid grid-cols-2 gap-4 my-8">
-                    <img src="https://i.imgur.com/MLFeRgs.jpeg" alt={t.aboutModal.imgAlt1} className="w-full h-48 object-cover rounded-xl border-2 border-[var(--color-islamic-deep)]" />
-                    <img src="https://i.imgur.com/dWOkwUZ.jpeg" alt={t.aboutModal.imgAlt2} className="w-full h-48 object-cover rounded-xl border-2 border-[var(--color-islamic-deep)]" />
+                  <div className="my-8 aspect-video rounded-xl overflow-hidden border-2 border-[var(--color-islamic-deep)] shadow-lg bg-black">
+                    <video 
+                      className="w-full h-full" 
+                      controls 
+                      preload="metadata"
+                      poster="/ef686a8a-6a1f-473c-9f01-909da4073e06.jpg"
+                    >
+                      <source src="/vids/video-ajusco-principal.mp4" type="video/mp4" />
+                      Tu navegador no soporta el elemento de video.
+                    </video>
                   </div>
 
                   <p>{t.aboutModal.p3}</p>
@@ -718,10 +747,7 @@ export default function App() {
 
                   <p>{t.aboutModal.p6}</p>
 
-                  <div className="grid grid-cols-2 gap-4 my-8">
-                    <img src="https://i.imgur.com/Bmzssk7.jpeg" alt={t.aboutModal.imgAlt3} className="w-full h-48 object-cover rounded-xl border-2 border-[var(--color-islamic-deep)]" />
-                    <img src="https://i.imgur.com/H8to6hA.jpeg" alt={t.aboutModal.imgAlt4} className="w-full h-48 object-cover rounded-xl border-2 border-[var(--color-islamic-deep)]" />
-                  </div>
+
 
                   <p>{t.aboutModal.p7}</p>
 
