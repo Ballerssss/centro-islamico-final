@@ -13,7 +13,7 @@ const getAsset = (path: string) => {
 
 export default function App() {
   const [lang, setLang] = useState<Language>('es');
-  const [currentPage, setCurrentPage] = useState(window.location.pathname);
+  const [currentPage, setCurrentPage] = useState(window.location.hash || '#/');
   const [selectedGallery, setSelectedGallery] = useState<{title: string, imgs: string[]} | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [expandedImpactCard, setExpandedImpactCard] = useState<number | null>(null);
@@ -30,9 +30,9 @@ export default function App() {
   };
 
   useEffect(() => {
-    const handlePopState = () => setCurrentPage(window.location.pathname);
-    window.addEventListener('popstate', handlePopState);
-    return () => window.removeEventListener('popstate', handlePopState);
+    const handleHashChange = () => setCurrentPage(window.location.hash || '#/');
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
   useEffect(() => {
@@ -41,12 +41,13 @@ export default function App() {
   }, [lang]);
 
   const navigateTo = (path: string) => {
-    window.history.pushState({}, '', path);
-    setCurrentPage(path);
+    const hashPath = path.startsWith('#') ? path : `#${path}`;
+    window.location.hash = hashPath;
+    setCurrentPage(hashPath);
     window.scrollTo(0, 0);
   };
 
-  if (currentPage === '/legado-said-louahabi') {
+  if (currentPage === '#/legado-said-louahabi') {
     return <LegacyPage navigateTo={navigateTo} t={t} lang={lang} />;
   }
 
@@ -119,7 +120,7 @@ export default function App() {
         <div className="absolute inset-0 z-0">
           {/* Puedes cambiar esta imagen manualmente editando el atributo 'src' */}
           <img 
-            src={`${import.meta.env.BASE_URL}0c75c09b-b35e-4348-b3d8-4368dfcdc5ef.jpg`} 
+            src={getAsset("./0c75c09b-b35e-4348-b3d8-4368dfcdc5ef.jpg")} 
             alt="Islamic Architecture" 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
